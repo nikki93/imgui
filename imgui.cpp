@@ -4683,8 +4683,8 @@ bool ImGui::Begin(const char* name, bool* p_open, ImGuiWindowFlags flags)
             // Handle resize for: Resize Grips, Borders, Gamepad
             int border_held = -1;
             ImU32 resize_grip_col[4] = { 0 };
-            const int resize_grip_count = (flags & ImGuiWindowFlags_ResizeFromAnySide) ? 2 : 1; // 4
-            const int resize_border_count = (flags & ImGuiWindowFlags_ResizeFromAnySide) ? 4 : 0;
+            const int resize_grip_count = 2; // (flags & ImGuiWindowFlags_ResizeFromAnySide) ? 2 : 1; // 4
+            const int resize_border_count = 4; // (flags & ImGuiWindowFlags_ResizeFromAnySide) ? 4 : 0;
 
             const float grip_draw_size = (float)(int)ImMax(g.FontSize * 1.35f, window_rounding + 1.0f + g.FontSize * 0.2f);
             const float grip_hover_size = (float)(int)(grip_draw_size * 0.75f);
